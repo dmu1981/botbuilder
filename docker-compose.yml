@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+  rabbitmq:
+    hostname: some-rabbit
+    image: rabbitmq:3.11-management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    volumes:
+      - "./rabbitmq_log/:/var/log/rabbitmq/"
+      - "./rabbitmq_data/:/var/lib/rabbitmq/"
+
+  breeder: 
+    depends_on:
+      - rabbitmq
+    image: 302364434270.dkr.ecr.eu-central-1.amazonaws.com/bot:breeder0.1
+    
+  worker:
+    depends_on:
+      - rabbitmq
+    image: 302364434270.dkr.ecr.eu-central-1.amazonaws.com/bot:bot0.1

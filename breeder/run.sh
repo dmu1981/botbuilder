@@ -1,0 +1,1 @@
+./breeder --pool amqp://mhulla:jenny267@rabbitmq:5672 run

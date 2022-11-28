@@ -1,0 +1,1 @@
+/simulation/bot.x86_64 & ./wait-for-it.sh localhost:4444 -- /bot/aptivbot --genepool amqp://mhulla:jenny267@rabbitmq:5672

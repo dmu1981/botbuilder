@@ -1,2 +1,5 @@
 stage/bot
 stage/simulation
+stage/wait-for-it.sh
+rabbitmq_data
+rabbitmq_log
