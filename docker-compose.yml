@@ -1,6 +1,7 @@
 version: "3.9"
 services:
   rabbitmq:
+    restart: always
     hostname: some-rabbit
     image: rabbitmq:3.11-management
     ports:
@@ -11,11 +12,7 @@ services:
       - "./rabbitmq_data/:/var/lib/rabbitmq/"
 
   breeder: 
+    restart: always
     depends_on:
       - rabbitmq
     image: 302364434270.dkr.ecr.eu-central-1.amazonaws.com/bot:breeder0.1
-    
-  worker:
-    depends_on:
-      - rabbitmq
-    image: 302364434270.dkr.ecr.eu-central-1.amazonaws.com/bot:bot0.1

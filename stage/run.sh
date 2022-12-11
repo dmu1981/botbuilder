@@ -1,1 +1,1 @@
-/simulation/bot.x86_64 & ./wait-for-it.sh localhost:4444 -- /bot/aptivbot --genepool amqp://mhulla:jenny267@rabbitmq:5672
+/filebeat-8.5.2-linux-x86_64/filebeat -e & /simulation/bot.x86_64 & ./wait-for-it.sh localhost:4444 -- /bot/aptivbot --genepool amqp://mhulla:jenny267@genepool.dmuonline.net:5672

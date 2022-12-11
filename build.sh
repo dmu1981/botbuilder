@@ -8,9 +8,11 @@ cd ../.. && pwd
 cp -r ../simulation/* stage/simulation
 cp ../bot/target/debug/aptivbot stage/bot
 cp ../bot/config.yaml stage/bot
-cd stage && pwd && docker build -t 302364434270.dkr.ecr.eu-central-1.amazonaws.com/bot:bot0.1 . && docker push 302364434270.dkr.ecr.eu-central-1.amazonaws.com/bot:bot0.1
+cd stage && pwd && docker build -t 302364434270.dkr.ecr.eu-central-1.amazonaws.com/bot:bot0.6 . && docker push 302364434270.dkr.ecr.eu-central-1.amazonaws.com/bot:bot0.6
+#cd stage && pwd && docker build -t 302364434270.dkr.ecr.eu-central-1.amazonaws.com/bot:bot0.4 .
+
 
 cd ..
 cp wait-for-it.sh breeder/
 cp ../breeder/target/debug/rabbit-mq-test breeder/breeder
-cd breeder && docker build -t 302364434270.dkr.ecr.eu-central-1.amazonaws.com/bot:breeder0.1 . && docker push 302364434270.dkr.ecr.eu-central-1.amazonaws.com/bot:breeder0.1
+cd breeder && docker build -t 302364434270.dkr.ecr.eu-central-1.amazonaws.com/bot:breeder0.6 . && docker push 302364434270.dkr.ecr.eu-central-1.amazonaws.com/bot:breeder0.6
