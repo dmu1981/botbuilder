@@ -15,4 +15,4 @@ cd stage && pwd && docker build -t 302364434270.dkr.ecr.eu-central-1.amazonaws.c
 cd ..
 cp wait-for-it.sh breeder/
 cp ../breeder/target/debug/rabbit-mq-test breeder/breeder
-cd breeder && docker build -t 302364434270.dkr.ecr.eu-central-1.amazonaws.com/bot:breeder0.6 . && docker push 302364434270.dkr.ecr.eu-central-1.amazonaws.com/bot:breeder0.6
+cd breeder && docker build -t 302364434270.dkr.ecr.eu-central-1.amazonaws.com/bot:breeder0.7 . && docker push 302364434270.dkr.ecr.eu-central-1.amazonaws.com/bot:breeder0.7
